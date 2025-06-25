@@ -4,34 +4,76 @@
   <title>Quick Start</title>
   <meta charset="UTF-8">
   <style>
-    body {
+    html, body {
+      height: 100%;
+      margin: 0;
       font-family: Arial, sans-serif;
-      background: #fff6f0;
+    }
+
+    /* Background image layer */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: url('tapi_bldg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      opacity: 1; /* Adjust this for the image transparency */
+      z-index: -1;
+    }
+
+    /* Flex to center content */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      padding-top: 80px;
+      padding: 20px;
     }
+
+    .container {
+      background-color: rgba(255, 246, 240, 0.9); /* Optional tint layer */
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      opacity: 0.9;
+    }
+
     h1 {
-      color: #f9487c;
+      color:  #0504aa;
+      margin-bottom: 10px;
     }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
     a {
       display: inline-block;
-      margin: 12px;
+      margin: 0 10px;
       padding: 12px 20px;
-      background-color: #f9487c;
+      background-color:  #0504aa;
       color: white;
       text-decoration: none;
       border-radius: 8px;
       font-size: 18px;
+      transition: background-color 0.3s ease;
     }
+
     a:hover {
-      background-color: #e5376b;
+      background-color: #0504a7;
     }
   </style>
 </head>
 <body>
-  <h1>Welcome!</h1>
-  <p>Click a link below to proceed to the Client Satisfaction Survey</p>
-  <a href="https://forms.gle/By3NAwwkZ9AFSccaA" target="_blank">Internal Service</a>
-  <a href="https://forms.gle/dGteoeFWNuPthTzK9" target="_blank">External Service</a>
+  <div class="container">
+    <h1>Welcome!</h1>
+    <p>Click a link below to proceed to the Client Satisfaction Survey</p>
+    <a href="https://forms.gle/By3NAwwkZ9AFSccaA" target="_blank">Internal Service</a>
+    <a href="https://forms.gle/dGteoeFWNuPthTzK9" target="_blank">External Service</a>
+  </div>
 </body>
 </html>
