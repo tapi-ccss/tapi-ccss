@@ -37,4 +37,4 @@ project-root/
 
 ---
 
-> ✍ *Feel free to modify this README as your project grows (e.g., add backend features, forms, or additional pages).*
+> ✍ *Feel free to modify this README as the project grows (e.g., add backend features, forms, or additional pages).*
