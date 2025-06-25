@@ -1,17 +1,24 @@
+<!--This HTML code creates a responsive survey page with a background image and animated elements.
+The page includes a title, instructions, and two buttons that link to different surveys.
+The design is optimized for both desktop and mobile devices, ensuring a user-friendly experience across various screen sizes.-->
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Quick Start</title>
-  <meta charset="UTF-8">
   <style>
+    /* Base Styles */
     html, body {
       height: 100%;
       margin: 0;
+      padding: 0;
       font-family: Arial, sans-serif;
       overflow: hidden;
     }
 
-    /* Background image layer */
+    /* Background Fade-In Animation */
     body::before {
       content: "";
       position: fixed;
@@ -19,13 +26,21 @@
       left: 0;
       height: 100%;
       width: 100%;
-      background: url('images/tapi_bldg.jpg') no-repeat center center fixed;
+      background: url('tapi_bldg.jpg') no-repeat center center fixed;
       background-size: cover;
-      opacity: 1; /* Adjust this for the image transparency */
+
+      /* Animate fade-in */
+      opacity: 0.8;
+      animation: fadeInBg 1s ease-in forwards;
       z-index: -1;
     }
 
-    /* Flex to center content */
+    /* Fade-in keyframes */
+    @keyframes fadeInBg {
+      to { opacity: 1; }
+    }
+
+    /* Centering the content */
     body {
       display: flex;
       justify-content: center;
@@ -34,61 +49,129 @@
       padding: 20px;
     }
 
+    /* Main Container */
     .container {
-      background-color: rgba(255, 246, 240, 0.9); /* Optional tint layer */
-      padding: 40px;
+      background-color: rgba(255, 246, 240, 0.95);
+      padding: 40px 30px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      opacity: 0.9;
+
+      /* Animate upward from bottom */
+      opacity: 0;
+      transform: translateY(80px);
+      animation: slideUp 1s ease-out 0.5s forwards;
+
+      /* Make container responsive */
+      max-width: 480px;
+      width: 100%;
+      box-sizing: border-box;
     }
 
+    /* Slide-up animation */
+    @keyframes slideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Typography */
     h1 {
-      color:  #0504aa;
-      margin-bottom: 10px;
+      color: #0504aa;
+      font-size: 1.8rem;
+      margin-bottom: 12px;
     }
 
     p {
-      font-size: 18px;
-      margin-bottom: 25px;
+      font-size: 1rem;
+      margin-bottom: 24px;
+      line-height: 1.4;
     }
 
+    /* Button Layout */
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    /* Button Styles */
     a {
       display: inline-block;
-      margin: 0 10px;
-      padding: 12px 20px;
-      background-color:  #0504aa;
+      padding: 14px 24px;
+      background-color: #0504aa;
       color: white;
       text-decoration: none;
       border-radius: 8px;
-      font-size: 18px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      min-width: 140px;
     }
 
     a:hover {
       background-color: #1514f9;
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.12);
-      transition: 0.5s ease;
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
     }
 
-    @media (max-width: 500px) {
-    body {
-      touch-action: none;
+    /* Responsive for tablets and smaller */
+    @media (max-width: 768px) {
+      .container {
+        padding: 32px 20px;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+      }
+
+      .button-group {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      a {
+        width: 100%;
+        font-size: 1rem;
+      }
     }
 
-      
-    a {
-      display: block;
-      margin: 10px auto;
+    /* Responsive for phones */
+    @media (max-width: 480px) {
+      .container {
+        padding: 24px 16px;
+      }
+
+      h1 {
+        font-size: 1.4rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+
+      a {
+        padding: 14px;
+        font-size: 0.95rem;
+      }
     }
-  }
   </style>
 </head>
 <body>
   <div class="container">
+    <!-- Main Title and Instructions -->
     <h1>Welcome!</h1>
     <p>Click a link below to proceed to the Client Satisfaction Survey</p>
-    <a href="https://forms.gle/By3NAwwkZ9AFSccaA" target="_blank">Internal Service</a>
-    <a href="https://forms.gle/dGteoeFWNuPthTzK9" target="_blank">External Service</a>
+    
+    <!-- Button Group for Links -->
+    <div class="button-group">
+      <a href="https://forms.gle/By3NAwwkZ9AFSccaA" target="_blank">Internal Service</a>
+      <a href="https://forms.gle/dGteoeFWNuPthTzK9" target="_blank">External Service</a>
+    </div>
   </div>
 </body>
 </html>
