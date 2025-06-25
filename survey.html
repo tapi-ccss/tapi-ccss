@@ -8,6 +8,7 @@
       height: 100%;
       margin: 0;
       font-family: Arial, sans-serif;
+      overflow: hidden;
     }
 
     /* Background image layer */
@@ -70,6 +71,10 @@
     }
 
     @media (max-width: 500px) {
+    body {
+      touch-action: none;
+    }
+
     a {
       display: block;
       margin: 10px auto;
