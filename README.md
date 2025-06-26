@@ -1,4 +1,4 @@
-# 🌐 Client Satisfaction Survey Portal
+# 🌐 Customer Client Satisfaction Survey Portal
 
 ## 📝 Description
 
@@ -51,7 +51,7 @@ project-root/
 
 ## 🗓️ Recent Updates
 
-## ✅ Version Improvements:
+### ✅ Version Improvements:
 * Added grayscale effect to button backgrounds with color reveal on hover
 * Centered button text above background images using flex layout
 * Assigned distinct background images to the Internal and External buttons
@@ -62,7 +62,7 @@ project-root/
 
 ## 🔄 Latest Changes
 
-## 🔧 Visual Enhancements
+### 🔧 Visual Enhancements
 * Applied a semi-transparent background to the .container using rgba() instead of opacity, preserving the visibility of text and button content
 * Button text is now overlaid clearly using flex alignment to remain legible regardless of the image
 * Button background images are different for Internal and External services, grayscale by default, with full color on hover
