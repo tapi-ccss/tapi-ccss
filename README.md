@@ -67,7 +67,13 @@ project-root/
 * Button text is now overlaid clearly using flex alignment to remain legible regardless of the image
 * Button background images are different for Internal and External services, grayscale by default, with full color on hover
 * Increased button size for better visibility and touch interaction
-* Ensured all changes maintain responsive behavior on screens of all sizes
+
+---
+
+## 📱 Mobile Responsiveness
+* Button layout stacks vertically on screens smaller than 768px
+* Buttons and text resize dynamically to maintain readability on phones and tablets
+* Container and padding adjust based on viewport width to avoid horizontal scrolling
 
 ---
 
