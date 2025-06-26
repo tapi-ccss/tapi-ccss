@@ -37,4 +37,12 @@ project-root/
 
 ---
 
+## 🔄 Latest Changes
+
+### 🔧 Visual Enhancements
+- Applied a semi-transparent background to the `.container` using `rgba()` instead of `opacity`, preserving the visibility of text and button content
+- Ensured layout remains clean and readable on all screen sizes without text washout or reduced contrast
+
+---
+
 > ✍ *Feel free to modify this README as the project grows (e.g., add backend features, forms, or additional pages).*
