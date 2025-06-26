@@ -37,7 +37,7 @@ The landing page includes:
 ---
 
 ## 📂 Folder Structure
-
+<pre><code>
 project-root/
 │
 ├── survey.html             # Main landing page
@@ -46,7 +46,7 @@ project-root/
 │  └── internal.png         # Internal Service button image
 │  └── external.png         # External Service button image
 └── README.md               # Project documentation
-
+</code></pre>
 ---
 
 ## 🗓️ Recent Updates
