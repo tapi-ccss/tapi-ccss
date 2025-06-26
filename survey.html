@@ -51,7 +51,7 @@ The design is optimized for both desktop and mobile devices, ensuring a user-fri
 
     /* Main Container */
     .container {
-      background-color: rgba(255, 246, 240, 0.95);
+      background-color: rgba(255, 246, 240, 0.85);
       padding: 40px 30px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -62,7 +62,7 @@ The design is optimized for both desktop and mobile devices, ensuring a user-fri
       animation: slideUp 1s ease-out 0.5s forwards;
 
       /* Make container responsive */
-      max-width: 480px;
+      max-width: 1000px;
       width: 100%;
       box-sizing: border-box;
     }
@@ -80,6 +80,7 @@ The design is optimized for both desktop and mobile devices, ensuring a user-fri
       color: #0504aa;
       font-size: 1.8rem;
       margin-bottom: 12px;
+      text-align: center;
     }
 
     p {
@@ -93,26 +94,63 @@ The design is optimized for both desktop and mobile devices, ensuring a user-fri
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 12px;
+      gap: 20px;
     }
 
     /* Button Styles */
     a {
-      display: inline-block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 300px;
+      height: 150px;
       padding: 14px 24px;
       background-color: #0504aa;
       color: white;
       text-decoration: none;
-      border-radius: 8px;
-      font-size: 1rem;
+      border-radius: 10px;
+      font-size: 2rem;
+      position: relative;
       transition: all 0.3s ease;
       min-width: 140px;
+      overflow: hidden;
     }
 
     a:hover {
       background-color: #1514f9;
       transform: translateY(-4px);
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    }
+
+    a span {
+      position: relative;
+      z-index: 2;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 0.4em 0.8em;
+      border-radius: 6px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.9);
+    }
+
+    /* Button background image */
+    .internal-btn, .external-btn {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .internal-btn {  
+      filter: grayscale(100%);
+      background-image: url('images/internal.png');
+    }
+
+    .external-btn {
+      filter: grayscale(100%);
+      background-image: url('images/external.png');
+    }
+
+    .internal-btn:hover, .external-btn:hover {
+      filter: grayscale(0%);
     }
 
     /* Responsive for tablets and smaller */
@@ -136,6 +174,8 @@ The design is optimized for both desktop and mobile devices, ensuring a user-fri
 
       a {
         width: 100%;
+        max-width: 300px;
+        height: 70px;
         font-size: 1rem;
       }
     }
@@ -155,6 +195,7 @@ The design is optimized for both desktop and mobile devices, ensuring a user-fri
       }
 
       a {
+        height: 60px;
         padding: 14px;
         font-size: 0.95rem;
       }
@@ -165,12 +206,16 @@ The design is optimized for both desktop and mobile devices, ensuring a user-fri
   <div class="container">
     <!-- Main Title and Instructions -->
     <h1>Welcome!</h1>
-    <p>Click a link below to proceed to the Client Satisfaction Survey</p>
+    <p>Click a link below to proceed to the Customer Client Satisfaction Survey (CCSS)</p>
     
     <!-- Button Group for Links -->
     <div class="button-group">
-      <a href="https://forms.gle/By3NAwwkZ9AFSccaA" target="_blank">Internal Service</a>
-      <a href="https://forms.gle/dGteoeFWNuPthTzK9" target="_blank">External Service</a>
+      <a href="https://forms.gle/By3NAwwkZ9AFSccaA" target="_blank" class="internal-btn" aria-label="Internal Service Survey" role="button">
+        <span>Internal Service</span>
+      </a>
+      <a href="https://forms.gle/dGteoeFWNuPthTzK9" target="_blank" class="external-btn" aria-label="External Service Survey" role="button">
+        <span>External Service</span>
+      </a>
     </div>
   </div>
 </body>
